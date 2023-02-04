@@ -72,7 +72,7 @@ def run_inference(img_path = IMG_PATH,
     
     if plot==True:
         plt.imshow(np.squeeze(pixels))
-        plt.title(f'This image is labelled in class: {label}')
+        plt.title(f'This image is labelled as: {label}. Did we get it right?')
         plt.xticks([])
         plt.yticks([])
         plt.grid(False)
