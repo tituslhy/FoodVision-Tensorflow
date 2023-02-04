@@ -3,9 +3,10 @@
   <img src="Images/foodapp.jpeg">
 </p> <br>
 
-This project is a personal project to develop a computer vision classification model for food images. This is an area of active research (https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/static/bossard_eccv14_food-101.pdf). Thankfully, this means that the FoodVision data is availale as a tensorflow dataset object (To get an overview of all datasets available in tensorflow datasets, go to https://www.tensorflow.org/datasets/overview). There are altogether 101 different classes, some of which look similar - for e.g. Baklava and Apple Pie. We aim to beat the state-of-the-art classification accuracy performance of 77%.
+This project is a personal project to develop a computer vision classification model for food images. Thankfully, this means that the FoodVision data is availale as a tensorflow dataset object (To get an overview of all datasets available in tensorflow datasets, go to https://www.tensorflow.org/datasets/overview). There are altogether 101 different classes, some of which look similar - for e.g. Baklava and Apple Pie. We aim to beat the state-of-the-art classification accuracy performance of 77% reported in the DeepFood paper (https://www.researchgate.net/publication/304163308_DeepFood_Deep_Learning-Based_Food_Image_Recognition_for_Computer-Aided_Dietary_Assessment).
 <br>
-## The approach - using transfer learning
+
+## The approach - harnessing the power of transfer learning
 1. Preprocess data by ensuring that all images are scaled to the same dimensions with normalized pixel values.
 2. Develop data loader to feed for model training.
 3. Experiment with different pre-trained image classification models from Tensorflow as feature extractors. 
@@ -33,6 +34,7 @@ python3 main.py --img "img.jpeg" --plot "True"
 1. There is a bug when using mixed precision training with EfficientNet. The current fix is to use Tensorflow version 2.4 instead.
 2. EfficientNet models have an input normalization in-built, so there is no need to scale image pixels between 0-255 during  preprocessing.
 3. Model training and annotations are in under `Notebooks > FoodVision101 Model Development.ipynb`
+4. Though we compare our performance to the DeepFood paper, this is not a like-for-like comparison. Researchers in the DeepFood paper use object detection algorithms to identify multiple objects within the same image. This project is only trained on images with one object and should only be used for single object classification.
 
 ## <h3> Experimental results and findings </h3>
 We experimented with the following feature extractors before finetuning: <br>
