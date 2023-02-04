@@ -15,7 +15,6 @@ Our final model achieved a validation accuracy of 84.4%.
 3. Experiment with different pre-trained image classification models from Tensorflow as feature extractors. 
 4. Unfreeze 5-10 convolution layers in the best performing feature extractor model and finetune the model for 5 more epochs.
 5. Model evaluation - ascertain the classes that the model struggles to understand.
-6. Quantization aware training - we need lean models for deployment with low latency. This is a bonus objective, as the best model might not adopt mixed precision training.
 <br>
 
 ## To instantiate environment
