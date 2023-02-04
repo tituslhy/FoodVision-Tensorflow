@@ -1,0 +1,1 @@
+This project is a personal project to develop a computer vision classification model for food images. More detailed README info to come! Watch this space for more information.
