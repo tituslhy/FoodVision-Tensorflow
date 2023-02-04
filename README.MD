@@ -6,6 +6,9 @@
 This project is a personal project to develop a computer vision classification model for food images. Thankfully, this means that the FoodVision data is availale as a tensorflow dataset object (To get an overview of all datasets available in tensorflow datasets, go to https://www.tensorflow.org/datasets/overview). There are altogether 101 different classes, some of which look similar - for e.g. Baklava and Apple Pie. We aim to beat the state-of-the-art classification accuracy performance of 77% reported in the DeepFood paper (https://www.researchgate.net/publication/304163308_DeepFood_Deep_Learning-Based_Food_Image_Recognition_for_Computer-Aided_Dietary_Assessment).
 <br>
 
+Our final model achieved a validation accuracy of 84.4%.
+<br>
+
 ## The approach - harnessing the power of transfer learning
 1. Preprocess data by ensuring that all images are scaled to the same dimensions with normalized pixel values.
 2. Develop data loader to feed for model training.
