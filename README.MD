@@ -3,7 +3,7 @@
   <img src="Images/foodapp.jpeg">
 </p> <br>
 
-This project is a personal project to develop a computer vision classification model for food images. This is an area of active research (https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/static/bossard_eccv14_food-101.pdf). Thankfully, this means that the FoodVision data is availale as a tensorflow dataset object (To get an overview of all datasets available in tensorflow datasets, go to https://www.tensorflow.org/datasets/overview).
+This project is a personal project to develop a computer vision classification model for food images. This is an area of active research (https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/static/bossard_eccv14_food-101.pdf). Thankfully, this means that the FoodVision data is availale as a tensorflow dataset object (To get an overview of all datasets available in tensorflow datasets, go to https://www.tensorflow.org/datasets/overview). There are altogether 101 different classes, some of which look similar - for e.g. Baklava and Apple Pie. We aim to beat the state-of-the-art classification accuracy performance of 77%!
 
 ## The approach - using transfer learning
 1. Preprocess data by ensuring that all images are scaled to the same dimensions with normalized pixel values.
