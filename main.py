@@ -38,7 +38,7 @@ if args.q:
 else:
     QUANTIZE = False
 
-if QUANTIZE = True:
+if QUANTIZE == True:
     model_path = './Model/best_model_q.h5'
     weight_path = './Model/best_weights_q.h5'
 else:
