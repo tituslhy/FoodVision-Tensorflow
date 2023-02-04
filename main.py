@@ -18,6 +18,10 @@ parser.add_argument('--plot',
                     type = bool,
                     required = False,
                     help = "Whether to plot the image after classifying. Defaults to False")
+parser.add_argument('--q',
+                    type = bool,
+                    required = False,
+                    help = "Whether to use quantized models to run inference. Defaults to False")
 
 args = parser.parse_args()
 
@@ -29,13 +33,26 @@ if args.plot:
 else:
     PLOT = False
 
+if args.q:
+    QUANTIZE = args.q
+else:
+    QUANTIZE = False
+
+if QUANTIZE = True:
+    model_path = './Model/best_model_q.h5'
+    weight_path = './Model/best_weights_q.h5'
+else:
+    model_path = './Model/best_model.h5',
+    weight_path = './Model/best_weights.h5'
+
 labels_list = open('file.txt','r').read().split('\n')
 labels = {num:name for num,name in enumerate(labels_list)}
 
 def run_inference(img_path = IMG_PATH,
                   plot = PLOT,
-                  model_path = './Model/best_model.h5',
-                  weight_path = './Model/best_weights.h5'):
+                  model_path = model_path,
+                  weight_path = model_path,
+                  ):
     """_summary_
     Runs inference on the given image.
 
