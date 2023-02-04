@@ -16,7 +16,7 @@ This project is a personal project to develop a computer vision classification m
 
 ## To instantiate environment
 ```
-git clone https://github.com/tituslhy/NER
+git clone https://github.com/tituslhy/FoodVision-Tensorflow
 pip -r requirements.txt
 ```
 <br>
